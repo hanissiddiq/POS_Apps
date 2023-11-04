@@ -1,17 +1,23 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:animated_login_v1/pages/regis.dart';
+import 'package:animated_login_v1/pages/login.dart';
+
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:sizer/sizer.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+// ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
+
+import 'package:flutter/material.dart';
+
+class RegisPage extends StatefulWidget {
+  const RegisPage({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisPage> createState() => _RegisPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisPageState extends State<RegisPage> {
   var focusNodeEmail = FocusNode();
   var focusNodePassword = FocusNode();
   bool isFocusedEmail = false;
@@ -25,6 +31,14 @@ class _LoginPageState extends State<LoginPage> {
         isFocusedEmail = focusNodeEmail.hasFocus;
       });
     });
+
+    //focus Nama
+    focusNodeEmail.addListener(() {
+      setState(() {
+        isFocusedEmail = focusNodeEmail.hasFocus;
+      });
+    });
+
     focusNodePassword.addListener(() {
       setState(() {
         isFocusedPassword = focusNodePassword.hasFocus;
@@ -33,7 +47,6 @@ class _LoginPageState extends State<LoginPage> {
     super.initState();
   }
 
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
@@ -75,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                           delay: const Duration(milliseconds: 800),
                           duration: const Duration(milliseconds: 900),
                           child: Text(
-                            'Mari masuk ke Apps',
+                            'Daftar Akun',
                             style: TextStyle(
                               fontSize: 25.sp,
                               fontWeight: FontWeight.w600,
@@ -100,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
                           delay: const Duration(milliseconds: 600),
                           duration: const Duration(milliseconds: 700),
                           child: Text(
-                            'Kamu sudah ditunggu!',
+                            'Isikan Data Valid',
                             style: TextStyle(
                               fontSize: 25.sp,
                               fontWeight: FontWeight.w400,
@@ -242,7 +255,7 @@ class _LoginPageState extends State<LoginPage> {
                             child: FadeInUp(
                                 delay: const Duration(milliseconds: 700),
                                 duration: const Duration(milliseconds: 800),
-                                child: const Text('Masuk')),
+                                child: const Text('Daftar')),
                           ),
                         )
                       ],
@@ -255,7 +268,7 @@ class _LoginPageState extends State<LoginPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Text(
-                          'Anda belum punya akun ?',
+                          'Anda sudah punya akun ?',
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 15,
@@ -267,11 +280,11 @@ class _LoginPageState extends State<LoginPage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const RegisPage(),
+                                    builder: (context) => const LoginPage(),
                                   ));
                             },
                             child: const Text(
-                              'Daftar',
+                              'Masuk',
                               style: TextStyle(
                                 color: Color(0xFF835DF1),
                                 fontSize: 15,

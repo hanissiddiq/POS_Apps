@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:animated_login_v1/pages/login.dart';
+import 'package:animated_login_v1/pages/regis.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -125,7 +126,13 @@ class _WelcomePageState extends State<WelcomePage> {
                           ),
                         ),
                         TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const RegisPage(),
+                                  ));
+                            },
                             child: const Text(
                               'Daftar',
                               style: TextStyle(
