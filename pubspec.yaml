@@ -66,6 +66,10 @@ flutter:
     - assets/images/oli/SPX2.jpg
     - assets/images/oli/MPX2.jpg
     - assets/images/oli/MPX3.jpg
+    - assets/images/oli/Oli-Gear-Honda.jpg
+    - assets/images/oli/AHM_Gear_Oil.jpg
+
+    - assets/images/oli/Cairan-Pendingin-Coolant.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
