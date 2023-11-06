@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:animated_login_v1/pages/homepage.dart';
 import 'package:animated_login_v1/pages/regis.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
@@ -224,7 +225,7 @@ class _LoginPageState extends State<LoginPage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const RegisPage(),
+                                    builder: (context) => const HomePage(),
                                   ));
                             },
                             style: ElevatedButton.styleFrom(

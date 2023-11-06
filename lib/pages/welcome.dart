@@ -55,7 +55,7 @@ class _WelcomePageState extends State<WelcomePage> {
                               'Point Of Sales App v1.0',
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  fontSize: 20.sp, fontWeight: FontWeight.w600),
+                                  fontSize: 22.sp, fontWeight: FontWeight.w600),
                             ),
                           ),
                           SizedBox(

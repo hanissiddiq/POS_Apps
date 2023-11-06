@@ -62,6 +62,10 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/loginImage.png
+    - assets/images/oli/SPX1.jpg
+    - assets/images/oli/SPX2.jpg
+    - assets/images/oli/MPX2.jpg
+    - assets/images/oli/MPX3.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,5 +1,4 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:animated_login_v1/pages/regis.dart';
 import 'package:animated_login_v1/pages/login.dart';
 
 import 'package:flutter/material.dart';
@@ -7,8 +6,6 @@ import 'package:iconly/iconly.dart';
 import 'package:sizer/sizer.dart';
 
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
-
-import 'package:flutter/material.dart';
 
 class RegisPage extends StatefulWidget {
   const RegisPage({Key? key}) : super(key: key);
@@ -20,8 +17,12 @@ class RegisPage extends StatefulWidget {
 class _RegisPageState extends State<RegisPage> {
   var focusNodeEmail = FocusNode();
   var focusNodePassword = FocusNode();
+  var focusNodeNama = FocusNode();
+  var focusNodeNomerHp = FocusNode();
   bool isFocusedEmail = false;
   bool isFocusedPassword = false;
+  bool isFocusedNama = false;
+  bool isFocusedNomerHp = false;
 
   @override
   void initState() {
@@ -33,9 +34,9 @@ class _RegisPageState extends State<RegisPage> {
     });
 
     //focus Nama
-    focusNodeEmail.addListener(() {
+    focusNodeNama.addListener(() {
       setState(() {
-        isFocusedEmail = focusNodeEmail.hasFocus;
+        isFocusedNama = focusNodeNama.hasFocus;
       });
     });
 
@@ -44,9 +45,16 @@ class _RegisPageState extends State<RegisPage> {
         isFocusedPassword = focusNodePassword.hasFocus;
       });
     });
+
+    focusNodeNomerHp.addListener(() {
+      setState(() {
+        isFocusedNomerHp = focusNodeNomerHp.hasFocus;
+      });
+    });
     super.initState();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
@@ -125,6 +133,52 @@ class _RegisPageState extends State<RegisPage> {
                   ),
                   SizedBox(
                     height: 5.h,
+                  ),
+                  FadeInDown(
+                    delay: const Duration(milliseconds: 700),
+                    duration: const Duration(milliseconds: 800),
+                    child: const Text(
+                      'Nama Lengkap',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                  FadeInDown(
+                    delay: const Duration(milliseconds: 600),
+                    duration: const Duration(milliseconds: 700),
+                    child: Container(
+                      margin: EdgeInsets.symmetric(vertical: 0.8.h),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 5.w, vertical: .3.h),
+                      decoration: BoxDecoration(
+                          color: isFocusedNama
+                              ? Colors.white
+                              : const Color(0xFFF1F0F5),
+                          border: Border.all(
+                              width: 1, color: const Color(0xFFD2D2D4)),
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: [
+                            if (isFocusedNama)
+                              BoxShadow(
+                                  color:
+                                      const Color(0xFF835DF1).withOpacity(.3),
+                                  blurRadius: 4.0,
+                                  spreadRadius: 2.0
+                                  // Glow Color
+                                  )
+                          ]),
+                      child: TextField(
+                        style: const TextStyle(fontWeight: FontWeight.w500),
+                        decoration: const InputDecoration(
+                            border: InputBorder.none, hintText: 'Nama'),
+                        focusNode: focusNodeNama,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 2.h,
                   ),
                   FadeInDown(
                     delay: const Duration(milliseconds: 700),
@@ -219,6 +273,52 @@ class _RegisPageState extends State<RegisPage> {
                             border: InputBorder.none,
                             hintText: 'Password'),
                         focusNode: focusNodePassword,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 2.h,
+                  ),
+                  FadeInDown(
+                    delay: const Duration(milliseconds: 700),
+                    duration: const Duration(milliseconds: 800),
+                    child: const Text(
+                      'Nomer Handphone',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                  FadeInDown(
+                    delay: const Duration(milliseconds: 600),
+                    duration: const Duration(milliseconds: 700),
+                    child: Container(
+                      margin: EdgeInsets.symmetric(vertical: 0.8.h),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 5.w, vertical: .3.h),
+                      decoration: BoxDecoration(
+                          color: isFocusedNomerHp
+                              ? Colors.white
+                              : const Color(0xFFF1F0F5),
+                          border: Border.all(
+                              width: 1, color: const Color(0xFFD2D2D4)),
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: [
+                            if (isFocusedNomerHp)
+                              BoxShadow(
+                                  color:
+                                      const Color(0xFF835DF1).withOpacity(.3),
+                                  blurRadius: 4.0,
+                                  spreadRadius: 2.0
+                                  // Glow Color
+                                  )
+                          ]),
+                      child: TextField(
+                        style: const TextStyle(fontWeight: FontWeight.w500),
+                        decoration: const InputDecoration(
+                            border: InputBorder.none, hintText: '08221188XXXX'),
+                        focusNode: focusNodeNomerHp,
                       ),
                     ),
                   ),

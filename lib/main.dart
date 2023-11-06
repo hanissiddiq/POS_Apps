@@ -1,4 +1,5 @@
 import 'package:animated_login_v1/pages/welcome.dart';
+import 'package:animated_login_v1/pages/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -13,7 +14,9 @@ class AnimatedLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(
       builder: (context, orientation, deviceType) => MaterialApp(
-          theme: ThemeData(fontFamily: 'Satoshi'), home: const WelcomePage()),
+          // theme: ThemeData(fontFamily: 'Satoshi'), home: const WelcomePage()),
+          theme: ThemeData(fontFamily: 'Satoshi'),
+          home: const HomePage()),
     );
   }
 }
