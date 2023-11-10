@@ -6,9 +6,17 @@ app.
 A new Flutter project.
 technology this project
 - Flutter v3.39
-- SDK 33
+- SDK 33 / 34
 - Widget full service
 - API PHP
+- Open JDK 11
+- Java JDK SE 11 & 21
+
+Set Environment
+- JAVA_HOME = C:\User\Program Files\Java\JDK v1.8.xxx
+- ANDROID_HOME = C:\User\Program Files\Android
+- PATH = 
+- 
   
 
 ## Getting Started
