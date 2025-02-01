@@ -1,5 +1,4 @@
-import 'package:animated_login_v1/pages/welcome.dart';
-import 'package:animated_login_v1/pages/homepage.dart';
+import 'package:animated_login_v1/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -16,7 +15,21 @@ class AnimatedLogin extends StatelessWidget {
       builder: (context, orientation, deviceType) => MaterialApp(
           // theme: ThemeData(fontFamily: 'Satoshi'), home: const WelcomePage()),
           theme: ThemeData(fontFamily: 'Satoshi'),
-          home: const HomePage()),
+          home: const LoginPage()),
     );
   }
+
+  // contoh yang menggunakan routes
+  // @override
+  // Widget build(BuildContext context) {
+  //   return MaterialApp(
+  //     debugShowCheckedModeBanner: false,
+  //     routes: {
+  //       '/': (context) => SplashPage(),
+  //       '/sign-in': (context) => SignInPage(),
+  //       '/sign-up': (context) => SignUpPage(),
+  //       '/home': (context) => MainPage(),
+  //     },
+  //   );
+  // }
 }

@@ -243,7 +243,10 @@ class _LoginPageState extends State<LoginPage> {
                             child: FadeInUp(
                                 delay: const Duration(milliseconds: 700),
                                 duration: const Duration(milliseconds: 800),
-                                child: const Text('Masuk')),
+                                child: const Text(
+                                  'Masuk',
+                                  style: TextStyle(color: Colors.white),
+                                )),
                           ),
                         )
                       ],
