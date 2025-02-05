@@ -1,5 +1,6 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
 
+import 'package:animated_login_v1/widget/NewestItemsWidget.dart';
 import 'package:animated_login_v1/widget/PopularItemsWidget.dart';
 import 'package:animated_login_v1/widget/appbarwidget.dart';
 import 'package:animated_login_v1/widget/categorieswidget.dart';
@@ -96,6 +97,21 @@ class HomePage extends StatelessWidget {
           ),
 
           PopularItemsWidget(),
+
+          //Newest Items
+          Padding(
+            padding: EdgeInsets.only(top: 20, left: 10),
+            child: Text(
+              "Newest",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
+          ),
+
+          //Newest Items Widget
+          NewestItemsWidget(),
         ],
       ),
     );
