@@ -1,3 +1,4 @@
+import 'package:animated_login_v1/widget/CartBottomNavBar.dart';
 import 'package:animated_login_v1/widget/DrawerWidget.dart';
 import 'package:animated_login_v1/widget/appbarwidget.dart';
 import 'package:flutter/cupertino.dart';
@@ -433,6 +434,7 @@ class CartPage extends StatelessWidget {
         ],
       ),
       drawer: Drawerwidget(),
+      bottomNavigationBar:Cartbottomnavbar(),
     
     );
   }

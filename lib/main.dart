@@ -1,6 +1,7 @@
 import 'package:animated_login_v1/pages/homepage.dart';
 import 'package:animated_login_v1/pages/login.dart';
 import 'package:animated_login_v1/pages/CartPage.dart';
+import 'package:animated_login_v1/pages/regis.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -23,8 +24,10 @@ class AnimatedLogin extends StatelessWidget {
         // end rute default nya
 
         routes: {
-          "/": (context) => HomePage(),
-          "cartPage": (context) => CartPage(),
+          "/": (context) => const LoginPage(),
+           "loginPage": (context) => const LoginPage(),
+          // "regisPage": (context) => RegisPage(),
+          "cartPage": (context) => const CartPage(),
         },
       ),
     );

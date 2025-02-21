@@ -1,3 +1,5 @@
+import 'package:animated_login_v1/pages/login.dart';
+import 'package:animated_login_v1/pages/regis.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -102,6 +104,17 @@ class Drawerwidget extends StatelessWidget {
               "Logout",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
+
+// coding pindah page
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LoginPage(),
+                ),
+              );
+            },
+// coding pindah page
           ),
         ],
       ),
