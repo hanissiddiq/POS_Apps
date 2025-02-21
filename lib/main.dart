@@ -14,7 +14,9 @@ class AnimatedLogin extends StatelessWidget {
     return Sizer(
       builder: (context, orientation, deviceType) => MaterialApp(
           // theme: ThemeData(fontFamily: 'Satoshi'), home: const WelcomePage()),
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(fontFamily: 'Satoshi'),
+          //rute nya
           home: const LoginPage()),
     );
   }
