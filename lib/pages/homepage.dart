@@ -5,6 +5,8 @@ import 'package:animated_login_v1/widget/PopularItemsWidget.dart';
 import 'package:animated_login_v1/widget/appbarwidget.dart';
 import 'package:animated_login_v1/widget/categorieswidget.dart';
 import 'package:flutter/cupertino.dart';
+// ignore: unused_import
+import 'package:animated_login_v1/widget/DrawerWidget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -114,7 +116,7 @@ class HomePage extends StatelessWidget {
           NewestItemsWidget(),
         ],
       ),
-      // drawer: ,
+      drawer: Drawerwidget() ,
       floatingActionButton: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),

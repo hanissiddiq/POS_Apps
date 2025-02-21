@@ -12,7 +12,9 @@ class AppBarWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         InkWell(
-          onTap: () {},
+          onTap: () {
+            Scaffold.of(context).openDrawer();
+          },
           child: Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
