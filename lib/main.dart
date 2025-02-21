@@ -1,4 +1,6 @@
+import 'package:animated_login_v1/pages/homepage.dart';
 import 'package:animated_login_v1/pages/login.dart';
+import 'package:animated_login_v1/pages/CartPage.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -13,11 +15,18 @@ class AnimatedLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(
       builder: (context, orientation, deviceType) => MaterialApp(
-          // theme: ThemeData(fontFamily: 'Satoshi'), home: const WelcomePage()),
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(fontFamily: 'Satoshi'),
-          //rute nya
-          home: const LoginPage()),
+        // theme: ThemeData(fontFamily: 'Satoshi'), home: const WelcomePage()),
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(fontFamily: 'Satoshi'),
+        //rute default nya
+        // home: const LoginPage(),
+        // end rute default nya
+
+        routes: {
+          "/": (context) => HomePage(),
+          "cartPage": (context) => CartPage(),
+        },
+      ),
     );
   }
 

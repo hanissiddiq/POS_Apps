@@ -116,7 +116,7 @@ class HomePage extends StatelessWidget {
           NewestItemsWidget(),
         ],
       ),
-      drawer: Drawerwidget() ,
+      drawer: Drawerwidget(),
       floatingActionButton: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
@@ -130,7 +130,9 @@ class HomePage extends StatelessWidget {
           ],
         ),
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, "cartPage");
+          },
           child: Icon(
             CupertinoIcons.cart,
             size: 30,
