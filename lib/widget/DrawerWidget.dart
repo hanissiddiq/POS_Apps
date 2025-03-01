@@ -30,6 +30,9 @@ class Drawerwidget extends StatelessWidget {
           ),
           //List Tile
           ListTile(
+            onTap: () {
+              Navigator.pushNamed(context, "homePage");
+            },
             leading: const Icon(
               CupertinoIcons.home,
               color: Colors.blueAccent,

@@ -46,7 +46,7 @@ class Itembottomnavbar extends StatelessWidget {
               ),
               icon: Icon(
                 CupertinoIcons.cart,
-                size: 14,
+                size: 16,
               ),
               label: Text(
                 "Add To Cart",
