@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Cartbottomnavbar extends StatelessWidget {
-  const Cartbottomnavbar({super.key});
+class Itembottomnavbar extends StatelessWidget {
+  const Itembottomnavbar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: EdgeInsets.symmetric(horizontal: 16),
         height: 70,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -17,7 +17,7 @@ class Cartbottomnavbar extends StatelessWidget {
               children: [
                 Text(
                   "Total :",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
                   width: 15,
@@ -25,18 +25,18 @@ class Cartbottomnavbar extends StatelessWidget {
                 Text(
                   "\Rp. 65.500",
                   style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 19,
                       fontWeight: FontWeight.bold,
                       color: Colors.blueAccent),
                 ),
               ],
             ),
-            ElevatedButton(
+            ElevatedButton.icon(
               onPressed: () {},
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
                 padding: MaterialStateProperty.all(
-                  EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                  EdgeInsets.symmetric(vertical: 13, horizontal: 15),
                 ),
                 shape: MaterialStateProperty.all(
                   RoundedRectangleBorder(
@@ -44,11 +44,15 @@ class Cartbottomnavbar extends StatelessWidget {
                   ),
                 ),
               ),
-              child: Text(
-                "Check Out",
+              icon: Icon(
+                CupertinoIcons.cart,
+                size: 14,
+              ),
+              label: Text(
+                "Add To Cart",
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.bold),
               ),
             ),

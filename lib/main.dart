@@ -1,3 +1,4 @@
+import 'package:animated_login_v1/pages/ItemPage.dart';
 import 'package:animated_login_v1/pages/homepage.dart';
 import 'package:animated_login_v1/pages/login.dart';
 import 'package:animated_login_v1/pages/CartPage.dart';
@@ -25,9 +26,10 @@ class AnimatedLogin extends StatelessWidget {
 
         routes: {
           "/": (context) => const LoginPage(),
-           "loginPage": (context) => const LoginPage(),
+          //"loginPage": (context) => const LoginPage(),
           // "regisPage": (context) => RegisPage(),
           "cartPage": (context) => const CartPage(),
+          "itemPage": (context) => const ItemPage(),
         },
       ),
     );

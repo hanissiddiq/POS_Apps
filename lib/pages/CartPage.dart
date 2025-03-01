@@ -91,7 +91,7 @@ class CartPage extends StatelessWidget {
                             padding: EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 0),
                             child: Container(
-                              padding: EdgeInsets.all(5),
+                              padding: EdgeInsets.all(4),
                               decoration: BoxDecoration(
                                 color: Colors.blueAccent,
                                 borderRadius: BorderRadius.circular(10),
@@ -188,7 +188,7 @@ class CartPage extends StatelessWidget {
                             padding: EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 0),
                             child: Container(
-                              padding: EdgeInsets.all(5),
+                              padding: EdgeInsets.all(4),
                               decoration: BoxDecoration(
                                 color: Colors.blueAccent,
                                 borderRadius: BorderRadius.circular(10),
@@ -284,7 +284,7 @@ class CartPage extends StatelessWidget {
                             padding: EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 0),
                             child: Container(
-                              padding: EdgeInsets.all(5),
+                              padding: EdgeInsets.all(4),
                               decoration: BoxDecoration(
                                 color: Colors.blueAccent,
                                 borderRadius: BorderRadius.circular(10),
@@ -434,8 +434,7 @@ class CartPage extends StatelessWidget {
         ],
       ),
       drawer: Drawerwidget(),
-      bottomNavigationBar:Cartbottomnavbar(),
-    
+      bottomNavigationBar: Cartbottomnavbar(),
     );
   }
 }
