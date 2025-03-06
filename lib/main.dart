@@ -1,13 +1,16 @@
 import 'package:animated_login_v1/pages/ItemPage.dart';
+import 'package:animated_login_v1/pages/SettingPage.dart';
 import 'package:animated_login_v1/pages/homepage.dart';
 import 'package:animated_login_v1/pages/login.dart';
 import 'package:animated_login_v1/pages/CartPage.dart';
 import 'package:animated_login_v1/pages/regis.dart';
 import 'package:animated_login_v1/pages/welcome.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {
+  Settings.init();
   runApp(const AnimatedLogin());
 }
 
@@ -32,6 +35,7 @@ class AnimatedLogin extends StatelessWidget {
           "regisPage": (context) => RegisPage(),
           "cartPage": (context) => const CartPage(),
           "itemPage": (context) => const ItemPage(),
+          "settingPage": (context) => const SettingPage(),
         },
       ),
     );
